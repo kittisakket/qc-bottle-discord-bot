@@ -1,5 +1,7 @@
+fastapi
 discord.py
-python-dotenv
+python-dotenv 
+uvicorn
 aiohttp
 torch
 opencv-python

@@ -5,3 +5,4 @@ uvicorn
 aiohttp
 torch
 opencv-python
+ultralytics

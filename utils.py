@@ -1,7 +1,20 @@
 from ultralytics import YOLO
 import cv2
+import os
+import requests
 
-model = YOLO('model.pt')
+model_path = "model.pt"
+model_url = "https://drive.google.com/uc?export=download&id=1L3ElnsX1n4aBgAiENYrXXnW04Yaa6LHP"  # <== เปลี่ยนตรงนี้
+
+if not os.path.exists(model_path):
+    print("Downloading model.pt...")
+    r = requests.get(model_url)
+    with open(model_path, 'wb') as f:
+        f.write(r.content)
+    print("Downloaded model.pt ✅")
+
+model = YOLO(model_path)
+
 
 def process_image(image_path):
     img = cv2.imread(image_path)

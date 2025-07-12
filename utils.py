@@ -7,7 +7,7 @@ import gc
 
 
 model_path = "model.pt"
-model_url = "https://drive.google.com/uc?export=download&id=1L3ElnsX1n4aBgAiENYrXXnW04Yaa6LHP"  # <== เปลี่ยนตรงนี้
+model_url = "https://drive.google.com/uc?export=download&id=1YopjpBNiPrvNtDq4tWLWyOjnEj7UJD1r"  # <== เปลี่ยนตรงนี้สำหรับการแนบ url ของ model
 
 if not os.path.exists(model_path):
     print("Downloading model.pt...")
